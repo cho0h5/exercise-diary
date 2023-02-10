@@ -5,14 +5,28 @@
 </script>
 
 {#each data.records as record}
-    {#each record.exercises as exercise}
-        {exercise.order}
-        {exercise.exercise}
-        {exercise.sets}
-        <br/>
-    {/each}
-    <br/>
-    {record.date}
-    <br/>
-    <br/>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="20">{record.date}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {#each record.exercises as exercise}
+                <tr>
+                    <td>
+                        {exercise.order}
+                    </td>
+                    <td>
+                        {exercise.exercise}
+                    </td>
+                    {#each exercise.sets as set}
+                        <td>
+                            {set}
+                        </td>
+                    {/each}
+                </tr>
+            {/each}
+        </tbody>
+    </table>
 {/each}
