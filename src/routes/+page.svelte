@@ -5,7 +5,7 @@
 </script>
 
 {#each data.records as record}
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th colspan="20">{record.date}</th>
