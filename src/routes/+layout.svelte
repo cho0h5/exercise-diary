@@ -2,7 +2,17 @@
     import "../app.css";
 </script>
 
-<slot></slot>
+<section class="hero">
+    <div class="hero-body">
+        <p class="title">Cheer up!</p>
+    </div>
+</section>
+
+<section class="section">
+    <div>
+        <slot></slot>
+    </div>
+</section>
 
 <footer class="footer">
     <div class="content has-text-centered">
